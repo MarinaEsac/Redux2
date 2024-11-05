@@ -7,5 +7,5 @@ const reducers =combineReducers({
     todos,
 })
 
-export default createStore(reducers )
+export default createStore(reducers)
 export {AddTodo , RemoveTodo , ToDo}
