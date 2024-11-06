@@ -7,7 +7,7 @@ import { ToDo } from '../../redux/todos/model';
 import { AddTodo, RemoveTodo } from '../../redux/todos/actions';
 import { useFormik } from "formik";
 
-const Todo: React.FC = () => {
+const TodoItem: React.FC = () => {
   const [todos, setTodos] = React.useState<ToDo[]>([]);
   const dispatch = useDispatch();
 
@@ -88,4 +88,4 @@ const Todo: React.FC = () => {
   );
 };
 
-export default connect()(Todo);
+export default connect()(TodoItem);
