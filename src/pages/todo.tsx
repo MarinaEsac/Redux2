@@ -3,9 +3,9 @@ import { connect, useDispatch } from "react-redux";
 import { generate } from "shortid";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { ToDo } from '../../redux/todos/model';
-import { AddTodo, RemoveTodo } from '../../redux/todos/actions';
 import { useFormik } from "formik";
+import { ToDo } from './../redux/todos/model';
+import { AddTodo, RemoveTodo } from "../redux";
 
 const TodoItem: React.FC = () => {
   const [todos, setTodos] = React.useState<ToDo[]>([]);
@@ -49,7 +49,6 @@ const TodoItem: React.FC = () => {
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
               value={formik.values.text}
-              required
               style={{ flexGrow: 1, marginRight: '10px' }}
             />
             <button type="submit" className="btn btn-primary">

@@ -1,15 +1,15 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Todo from "./components/Todo/todoItem";
+import TodoItem from './pages/todo';
 
 const myRouter = createBrowserRouter([
   {
     path: "/",
-    element: <Todo />,  
+    element: <TodoItem />,  
     children: [
       {
         path: "todo",       
-        element: <Todo />,
+        element: <TodoItem />,
       },
     ],
   },
